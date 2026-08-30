@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream-bg: #FDFCF0;
+    --color-emerald-deep: #064E3B;
+    --color-emerald-dark: #0B291B;
+    --color-emerald-mid: #047857;
+    --color-emerald-light: #ECFDF5;
+    --color-amber-gold: #D97706;
+    --color-amber-bright: #F59E0B;
+    --color-amber-light: #FEF3C7;
+    --color-amber-border: #FDE68A;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FDFCF0;
+    color: #1F2937;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif, .font-arabic-heading {
+    font-family: 'Cinzel', 'Amiri', Georgia, serif;
+  }
+
+  .font-urdu {
+    font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+    line-height: 1.8;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Geometric Balance Backgrounds & Patterns */
+.bg-geometric-grid {
+  background-color: #FDFCF0;
+  background-image: radial-gradient(#064E3B 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-emerald-geometric {
+  background-color: #064E3B;
+  background-image: radial-gradient(rgba(245, 158, 11, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-islamic-pattern {
+  background-color: #064E3B;
+  background-image: radial-gradient(#F59E0B 0.75px, transparent 0.75px), radial-gradient(#F59E0B 0.75px, #064E3B 0.75px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  background-blend-mode: overlay;
+}
+
+/* Geometric Diamond Monogram & Badges */
+.diamond-badge {
+  transform: rotate(45deg);
+}
+.diamond-badge > * {
+  transform: rotate(-45deg);
+}
+
+/* Geometric Accent Buttons */
+.btn-geometric-primary {
+  background-color: #064E3B;
+  color: #FFFFFF;
+  border-right: 4px solid #F59E0B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+.btn-geometric-primary:hover {
+  background-color: #047857;
+}
+
+.btn-geometric-outline {
+  border: 1px solid #064E3B;
+  color: #064E3B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+.btn-geometric-outline:hover {
+  background-color: #ECFDF5;
+}
+
+/* Gold Gradient utilities */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-button-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+.gold-button-gradient:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%);
+}
+
+/* Custom card shadow with subtle hairline amber borders */
+.card-geometric-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-geometric-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(6, 78, 59, 0.12), 0 0 0 1px rgba(217, 119, 6, 0.4);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
